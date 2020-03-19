@@ -1,15 +1,33 @@
-<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html>
 	<head>
-		<title>Jérôme Spielmann's webpage</title>
+		<title>Jérôme Spielmann</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 	</head>
 	<body>
+	<div>
+		<div class="header">
+			<div class="header-row">
+				<a href="/"><img src="img/portrait.jpg" alt="Jérôme Spielmann" id="portrait"></a>
+			</div>
+			<div class="header-row">
+				<h1>Jérôme Spielmann</h1>
+				<p id="description">
+					Currently working as a research and teaching assistant at Université d'Angers, I am a PhD in applied probability looking for a position as Data Scientist in Lyon or Strasbourg.
+				</p>
+				<div class="par-nav">
+					<a href="resume" id="navbar">CV</a>
+  					<a href="publications" id="navbar">Projects and publications</a>
+  					<a href="mailto:jerome.spielmann@gmx.ch" id="navbar">Mail</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+
     {{ content }}
-		<footer>
-    		<ul>
-        		<li><a href="mailto:jerome.spielmann@univ-angers.fr">email</a></li>
-			</ul>
-		</footer>
+
 	</body>
 </html>
