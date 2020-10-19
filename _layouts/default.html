@@ -3,26 +3,54 @@
 	<head>
 		<title>Jérôme Spielmann</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 	</head>
 	<body>
 	<div>
 		<div class="header">
 			<div class="header-row">
-				<a href="/"><img src="img/portrait.jpg" alt="Jérôme Spielmann" id="portrait"></a>
+				{% if page.lang == 'en' %}
+					<a href="/index.html"><img src="/img/portrait.jpg" alt="Jérôme Spielmann" id="portrait"></a>
+				{% endif %}
+
+				{% if page.lang == 'fr' %}
+					<a href="/fr/index.html"><img src="/img/portrait.jpg" alt="Jérôme Spielmann" id="portrait"></a>
+				{% endif %}
 			</div>
 			<div class="header-row">
 				<h1>Jérôme Spielmann</h1>
-				<p id="description">
-					I am a PhD in applied probability looking for a position involving statistics in Nantes.
-				</p>
-				<div class="par-nav">
-  					<a href="publications" id="navbar">Projects and publications</a>
-  					<a href="resume" id="navbar">Resume</a>
-  					<a href="mailto:jerome.spielmann@gmx.ch" id="navbar">Mail</a>
-  					<a href="https://www.linkedin.com/in/jerome-spielmann/">LinkedIn</a>
-				</div>
+				{% if page.lang == 'en' %}
+					<p id="description">
+						I am a PhD in applied probability looking for a position involving statistics in Nantes.
+					</p>
+				{% endif %}
+
+				{% if page.lang == 'fr' %}
+					<p id="description">
+						 Docteur en mathématiques appliquées dans le domaine des probabilités et des statistiques, je suis à la recherche d'un poste à Nantes.
+					</p>
+				{% endif %}
+
+				{% if page.lang == 'en' %}
+					<div class="par-nav">
+	  					<a href="/publications" id="navbar">Projects and publications</a>
+	  					<a href="/resume" id="navbar">Resume</a>
+	  					<a href="mailto:jerome.spielmann@gmx.ch" id="navbar">Mail</a>
+	  					<a href="https://www.linkedin.com/in/jerome-spielmann/" id="navbar">LinkedIn</a>
+	  					<a href="/fr/index.html" id="navbar">Site en français</a>
+					</div>
+				{% endif %}
+
+				{% if page.lang == 'fr' %}
+					<div class="par-nav">
+	  					<a href="/fr/publications" id="navbar">Projets et publications</a>
+	  					<a href="/fr/resume" id="navbar">CV</a>
+	  					<a href="mailto:jerome.spielmann@gmx.ch" id="navbar">Mail</a>
+	  					<a href="https://www.linkedin.com/in/jerome-spielmann/" id="navbar">LinkedIn</a>
+	  					<a href="/index.html" id="navbar">Site in english</a>
+					</div>
+				{% endif %}
 			</div>
 		</div>
 	</div>
